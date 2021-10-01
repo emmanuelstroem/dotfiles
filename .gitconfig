@@ -1,8 +1,46 @@
 [user]
-  name      =
-  email     =
-  username  =
-
-[github]
-  username  =
-  token     =
+  name = Emmanuel
+  email = 1090777+emmanuelstroem@users.noreply.github.com
+  signingkey = DEAD4079848B519D
+[core]
+  editor = code --wait
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  # Don't consider trailing space change as a cause for merge conflicts
+  whitespace = -trailing-space
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[format]
+	signOff = true
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[init]
+  defaultBranch = main
+[web]
+  browser = google-chrome
+[credential]
+  helper = osxkeychain
+[pull]
+	rebase = merges
+[push]
+  # Default push should only push the current branch to its push target, regardless of its remote name
+  default = upstream
+  # When pushing, also push tags whose commit-ishs are now reachable upstream
+  followTags = truesimple
+[merge]
+  tool = kdiff3
+  # Display common-ancestor blocks in conflict hunks
+  conflictStyle = diff3
+  # Disable fast-forward merges as default merge strategy.
+  ff = no
+[difftool]
+  prompt = false
+[alias]
+  d = diff
+  dc = diff --cached
+  l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
