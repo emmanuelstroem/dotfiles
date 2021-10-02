@@ -31,7 +31,7 @@
   # Default push should only push the current branch to its push target, regardless of its remote name
   default = upstream
   # When pushing, also push tags whose commit-ishs are now reachable upstream
-  followTags = truesimple
+  followTags = true
 [merge]
   tool = kdiff3
   # Display common-ancestor blocks in conflict hunks
