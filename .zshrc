@@ -92,7 +92,7 @@ HOSTNAME='devbox'
 
 DISABLE_AUTO_TITLE="true"
 
-# ZSH_THEME=""
+ZSH_THEME="apple"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git kubectl gcloud brew history history-substring-search)
