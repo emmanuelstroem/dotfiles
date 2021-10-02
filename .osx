@@ -40,7 +40,7 @@ fi
 defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "macbook"
 
 # Set Login Window Text
-defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Your text"
+defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Disk wipe after 3 wrong attemps"
 
 # Enable Firewall
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
@@ -83,7 +83,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set background to dark-grey color
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Stone.png"' 
+; osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Stone.png"' 
 
 ################################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                  #
@@ -114,7 +114,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ################################################################################
 
 # Save screenshots to Downloads folder.
-defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+defaults write com.apple.screencapture location -string "${HOME}/Documents/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -258,7 +258,7 @@ if [[ "$RUN_AS_ROOT" = true ]]; then
   # Disable Spotlight indexing for any volume that gets mounted and has not yet
   # been indexed before.
   # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-  sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+  sudo defaults write /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
   # Restart spotlight
   killall mds > /dev/null 2>&1
