@@ -195,7 +195,7 @@ chflags nohidden ~/Library
 defaults write com.apple.dock autohide -bool true
 
 # Show Only Active Applications
-defaults write com.apple.dock static-only -bool true
+# defaults write com.apple.dock static-only -bool true
 
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 30
