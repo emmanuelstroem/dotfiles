@@ -94,7 +94,7 @@ defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 # Trackpad: map bottom right corner to right-click (requires restart!)
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool false
 defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
 defaults write NSGlobalDomain ContextMenuGesture -int 1
@@ -114,7 +114,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ################################################################################
 
 # Save screenshots to Downloads folder.
-defaults write com.apple.screencapture location -string "${HOME}/Documents/Screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -135,9 +135,9 @@ defaults write com.apple.finder NewWindowTarget -string "PfDe"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 
 # Show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
@@ -207,7 +207,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.15
 defaults write com.apple.dock showhidden -bool true
 
 # Enable the 'reduce transparency' option. Save GPU cycles.
-defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool false
 
 # Hot corners
 # Possible values:
@@ -228,7 +228,7 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 defaults write com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Desktop
-defaults write com.apple.dock wvous-bl-corner -int 4
+defaults write com.apple.dock wvous-bl-corner -int 0 #4
 defaults write com.apple.dock wvous-bl-modifier -int 0 
 
 ################################################################################
