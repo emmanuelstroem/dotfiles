@@ -1,0 +1,10 @@
+alias axel="axel -k -n 20"
+alias zshconfig="code ~/.zshrc"
+
+alias ls="ls -lah"
+
+alias mine="cd ~/Developer/Github/emmanuelstroem"
+alias diafcon="cd ~/Developer/Github/diafcon"
+alias visma="cd ~/Developer/Github/e-conomic"
+
+alias gbprune="git branch --merged origin/master | grep -v master | xargs git branch -d"
