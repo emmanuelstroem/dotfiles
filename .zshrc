@@ -10,6 +10,9 @@ unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
 
