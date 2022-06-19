@@ -34,8 +34,10 @@ export HOMEBREW_AUTO_UPDATE_SECS=604800
 # Set architecture-specific brew share path.
 arch_name="$(uname -m)"
 if [ "${arch_name}" = "x86_64" ]; then
+  export PATH=/usr/local/bin:$PATH
   share_path="/usr/local/share"
 elif [ "${arch_name}" = "arm64" ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
   share_path="/opt/homebrew/share"
 else
   echo "Unknown architecture: ${arch_name}"
